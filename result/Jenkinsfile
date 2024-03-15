@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   stages {
-    stage('Build') {
+    stage("build") {
       when{
         changeset "**/result/**"
       }
@@ -13,7 +13,7 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Test') {
+        stage("test"){
             when{
         changeset "**/result/**"
         }
