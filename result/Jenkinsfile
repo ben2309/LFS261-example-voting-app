@@ -1,12 +1,12 @@
 pipeline {
-    agent any
+  agent any
 
-    stages {
-        stage('Build') {
-            when{
+  stages {
+    stage('Build') {
+      when{
         changeset "**/result/**"
-        }
-            }
+      }
+    }
             steps {
                 echo 'Building..'
                 dir ('result')
