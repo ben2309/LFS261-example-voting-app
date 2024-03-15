@@ -1,27 +1,27 @@
 pipeline {
   agent any
-
-  stages {
-    stage("build") {
+  stages{
+    stage("build"){
       when{
-        changeset "**/result/**"
-      }
-    }
-            steps {
-                echo 'Building..'
-                dir ('result')
-                sh 'npm install'
-            }
+        changeset "**/worker/**"
         }
+      steps{
+        echo 'Building..'
+        dir ('result'){
+          sh 'npm install
+          }
+        }
+    }
         stage("test"){
             when{
         changeset "**/result/**"
         }
             steps {
                 echo 'Testing..'
-                dir ('result')
+                dir ('result'){
                 sh 'npm install'
                 sh 'npm test'
+                }
 
             }
         }
