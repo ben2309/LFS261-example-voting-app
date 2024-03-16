@@ -29,7 +29,7 @@ pipeline {
     post{
         always{
             echo 'Building multibranch pipeline for worker is completed..'
-          slackSend(channel: "#aléatoire", color: "good", message: "Message from Jenkins Pipeline")
+          slackSend(color: "good", message: "Message from Jenkins Pipeline")
         }
     }
 }
