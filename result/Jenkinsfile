@@ -26,7 +26,7 @@ pipeline {
             }
         }
   }
-post{
+    post{
         always{
             echo 'Building multibranch pipeline for worker is completed..'
             slackSend color: "good", message: "Message from Jenkins Pipeline"
