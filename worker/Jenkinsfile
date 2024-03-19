@@ -83,7 +83,7 @@ pipeline {
   post {
     always {
       echo 'the job is complete'
-      slackSend 'end of pipe'
+      slackSend(message:"end of pipe")
     }
   }
 }
