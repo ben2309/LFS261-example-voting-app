@@ -2,7 +2,7 @@
 
 cd e2e 
 
-docker-compose down > /dev/null 2>&1 
+docker compose down > /dev/null 2>&1 
 
 #sleep 10
 
