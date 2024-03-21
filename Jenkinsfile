@@ -235,13 +235,9 @@ pipeline {
 
 
     stage("Quality Gate") {
-     agent any
        when{
         branch 'master'
       }
-
-      environment{
-        sonarpath = tool 'SonarScanner'
       } 
       steps {
             timeout(time: 1, unit: 'HOURS') {
