@@ -237,7 +237,6 @@ pipeline {
     stage("Quality Gate") {
        when{
         branch 'master'
-      }
       } 
       steps {
             timeout(time: 1, unit: 'HOURS') {
