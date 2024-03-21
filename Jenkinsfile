@@ -235,6 +235,7 @@ pipeline {
 
 
     stage("Quality Gate") {
+       agent any
        when{
         branch 'master'
       } 
