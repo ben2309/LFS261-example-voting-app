@@ -186,8 +186,7 @@ pipeline {
     stage('vote integration'){ 
     agent any 
     when{ 
-      changeset "**/vote/**" 
-      branch 'master' 
+	branch 'master' 
     } 
     steps{ 
       echo 'Running Integration Tests on vote app' 
@@ -235,14 +234,13 @@ pipeline {
 
 
     stage("Quality Gate") {
-     agent any
+       agent any
        when{
         branch 'master'
-      }
-
-      environment{
-        sonarpath = tool 'SonarScanner'
       } 
+	environment{
+        sonarpath = tool 'SonarScanner'
+      }
       steps {
             timeout(time: 1, unit: 'HOURS') {
                 // Parameter indicates whether to set pipeline to UNSTABLE if Quality Gate fails
